@@ -1,3 +1,17 @@
+:root {
+  --main-color: #ffffff;
+  --main-bg-color: #0D1D38;
+  --bg-color-field-active: #253755;
+  --color-field-active: #586E94;
+
+  /* MEDIA QUERIES */
+
+  --breakpoint-sm: 640px; /* Old Value : 576px */
+  --breakpoint-md: 768px; /* Old Value : 768px */
+  --breakpoint-lg: 1024px; /* Old Value : 992px */
+  --breakpoint-xl: 1280px; /* Old Value : 1200px */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +19,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+/*  background: url("backgroundimg.jpg") no-repeat left top, linear-gradient(#eb01a5, #d13531); */
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
 }
 
 code {
