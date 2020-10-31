@@ -28,3 +28,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+      margin-top: 70px;
+  }
+}
