@@ -6,7 +6,7 @@ import SearchBar from '../SearchBar/SearchBar';
 function Header() {
     return (
         <header className='header'>
-            <img src={logo} alt='logo' />
+            <img src={logo} className='logo' alt='logo' />
             <SearchBar />
         </header>
     )

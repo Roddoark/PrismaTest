@@ -1,12 +1,13 @@
 .header {
-    background-color: var(--azerty);
     margin-top: 23px;
 }
 
 @media screen and (min-width: 1024px) {
     .header {
         margin-top: 30px;
-        background-color: deeppink;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
   }
   
