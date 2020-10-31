@@ -1,0 +1,128 @@
+.top10-title {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.slick-button-previous, .slick-button-next {
+    display: none;
+}
+
+.slick-button-previous {
+    left: -25px;
+}
+.slick-button-next {
+    right: -25px;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track:before, .slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+.slick-initialized .slick-slide {
+    display: flex;
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+/*    background-color: red; */
+}
+
+.slider-button-iconNext {
+    display: block;
+    background: url("../../assets/slidernextarrow.svg") no-repeat center center;
+    width: 60px;
+    height: 60px;
+}
+
+.slider-button-iconPrevious {
+    display: block;
+    background: url("../../assets/sliderpreviousarrow.svg") no-repeat center center;
+    width: 60px;
+    height: 60px;
+}
+
+.slider-movie-img {
+    width: 70%;
+    border-radius: 10px;
+}
+.slider-movie-title {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.slider-movie-year {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .top10-title {
+        font-size: 26px;
+    }
+
+    .slick-slider .slick-track, .slick-slider .slick-list {
+        margin: 0 70px;
+    }
+    .slick-button-previous, .slick-button-next {
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: #253755;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .slider-movie-img {
+        width: 138px;
+        height: 215px;
+    }
+}
