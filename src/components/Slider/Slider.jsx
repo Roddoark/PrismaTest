@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Card from "../Card/Card";
+import SliderArrow from "../SliderArrow/SliderArrow";
 
 /*
 import "slick-carousel/slick/slick.css";
@@ -9,36 +10,11 @@ import "slick-carousel/slick/slick-theme.css";
 
 import './Slider.css';
 
-function SampleNextArrow(props) {
-    const { onClick } = props;
-    return (
-        <button
-        className="slick-button-next"
-        onClick={onClick}
-        >
-            <span className="slider-button-iconNext"></span>
-        </button>
-    );
-  }
-  
-  function SamplePrevArrow(props) {
-    const { onClick } = props;
-    return (
-      <button
-        className="slick-button-previous"
-        onClick={onClick}
-        >
-            <span className="slider-button-iconPrevious"></span>
-           
-        </button>
-    );
-  }
-
 export default class Slide extends Component {
     render() {
         const renderSlides = () =>
         [1, 2, 3, 4, 5, 6, 7, 8].map(num => (
-            <Card title={num} />
+            <Card title={num} year="dcv" />
         ));
         const settings = {
             infinite: true,
@@ -46,8 +22,8 @@ export default class Slide extends Component {
             slidesToScroll: 2,
             speed: 1000,
             width: 200,
-            nextArrow: <SampleNextArrow />,
-            prevArrow: <SamplePrevArrow />
+            nextArrow: <SliderArrow classname="slick-button-next" icon="slider-button-iconNext" />,
+            prevArrow: <SliderArrow classname="slick-button-previous" icon="slider-button-iconPrevious" />
         };
         return (
             <section className="container">
