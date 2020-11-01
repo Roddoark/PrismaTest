@@ -3,7 +3,7 @@ import './Card.css';
 
 function Card(props) {
     return (
-        <div className="card-movie">
+        <div className={`card-movie ${props.className}`}>
             <img 
                 src={props.img}
                 className="card-movie-img"

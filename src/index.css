@@ -1,50 +1,77 @@
 :root {
-  --main-color: #ffffff;
-  --main-bg-color: #0D1D38;
-  --bg-color-field-active: #253755;
-  --color-field-active: #586E94;
+    --main-color: #ffffff;
+    --main-bg-color: #0D1D38;
+    --bg-color-field-active: #253755;
+    --color-field-active: #586E94;
 
-  /* MEDIA QUERIES */
+    /* MEDIA QUERIES */
 
-  --breakpoint-sm: 640px; /* Old Value : 576px */
-  --breakpoint-md: 768px; /* Old Value : 768px */
-  --breakpoint-lg: 1024px; /* Old Value : 992px */
-  --breakpoint-xl: 1280px; /* Old Value : 1200px */
+    --breakpoint-sm: 640px; /* Old Value : 576px */
+    --breakpoint-md: 768px; /* Old Value : 768px */
+    --breakpoint-lg: 1024px; /* Old Value : 992px */
+    --breakpoint-xl: 1280px; /* Old Value : 1200px */
 }
 
+* { box-sizing: border-box; }
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-/*  background: url("backgroundimg.jpg") no-repeat left top, linear-gradient(#eb01a5, #d13531); */
-  background-color: var(--main-bg-color);
-  color: var(--main-color);
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: url("assets/backgroundimg.jpg") no-repeat center top, linear-gradient(#eb01a5, #d13531);
+    /*  background-color: var(--main-bg-color); */
+    color: var(--main-color);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-.container {
-  margin-top: 30px;
+.d-flex {
+    display: flex;
 }
 
-@media screen and (min-width: 1024px) {
-  .container {
-      margin-top: 70px;
-  }
+.ml-10 {
+    margin-left: 10px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.text-align-center {
+    text-align: center;
 }
 
 .App {
-  padding: 0 30px;
+    padding: 0 30px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
 
 @media screen and (min-width: 1024px) {
-  .App {
-    padding: 0 92px;
-  }
+    .App {
+        padding: 0 92px;
+    }
+
+    .container {
+        margin-top: 70px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
 }

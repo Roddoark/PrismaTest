@@ -12,13 +12,13 @@ function TopMoviesList({topMoviesList}) {
 
     return (
         <section className="container">
-        <h1 className="top10-title">Les 10 meilleurs films</h1>
-        <div className="slider">
-        <Slider>
-            {renderSlides()}
-        </Slider>
-        </div>
-    </section>
+            <h1 className="section-title">Les 10 meilleurs films</h1>
+            <div className="slider">
+            <Slider>
+                {renderSlides()}
+            </Slider>
+            </div>
+        </section>
     )
 }
 
