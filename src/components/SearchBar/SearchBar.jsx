@@ -3,8 +3,8 @@ import './SearchBar.css';
 
 function SearchBar() {
     return (
-        <form className="searchBar-block">
-            <label for="site-search" className="searchBar-label-hidden"></label>
+        <form className="searchBar-block" role="search">
+            <label htmlFor="site-search" className="searchBar-label-hidden"></label>
             <input 
                 type="search" 
                 id="site-search"
