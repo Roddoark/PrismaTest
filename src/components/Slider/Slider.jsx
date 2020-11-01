@@ -11,6 +11,37 @@ import "slick-carousel/slick/slick-theme.css";
 import './Slider.css';
 
 export default class Slide extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          error: null,
+          isLoaded: false,
+          items: []
+        };
+      }
+
+      componentDidMount() {
+        fetch("https://www.themoviedb.org/documentation/api/discover")
+          .then(res => res.json())
+          .then(
+            (result) => {
+              this.setState({
+                isLoaded: true,
+                items: result.items
+              });
+            },
+            // Remarque : il est important de traiter les erreurs ici
+            // au lieu d'utiliser un bloc catch(), pour ne pas passer à la trappe
+            // des exceptions provenant de réels bugs du composant.
+            (error) => {
+              this.setState({
+                isLoaded: true,
+                error
+              });
+            }
+          )
+      }
+
     render() {
         const renderSlides = () =>
         [1, 2, 3, 4, 5, 6, 7, 8].map(num => (
