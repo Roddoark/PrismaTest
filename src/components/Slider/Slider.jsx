@@ -13,7 +13,7 @@ function Slide(props) {
     const settings = {
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 3,
+        slidesToScroll: 2,
         speed: 1000,
         width: 200,
         nextArrow: <SliderArrow classname="slick-button-next" icon="slider-button-iconNext" />,

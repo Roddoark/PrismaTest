@@ -38,3 +38,13 @@ code {
       margin-top: 70px;
   }
 }
+
+.App {
+  padding: 0 30px;
+}
+
+@media screen and (min-width: 1024px) {
+  .App {
+    padding: 0 92px;
+  }
+}

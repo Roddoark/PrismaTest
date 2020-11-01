@@ -1,9 +1,7 @@
 import Axios from 'axios';
 import React, { Component } from 'react';
-import './App.css';
-import Header from './components/Header/Header';
 
-import Card from './components/Card/Card';
+import Header from './components/Header/Header';
 import TopMoviesList from './containers/TopMoviesList';
 
 const API_KEY = "ee52528a3d2bfff0312880daeaee21b3";
@@ -37,7 +35,6 @@ class App extends Component {
           <div className="App">
             <Header />
             {renderTopMoviesList()}
-            <Card title="okok" year="dcv" img="https://image.tmdb.org/t/p/w440_and_h660_face/fkqJJDb4u9rEyJu8Jm8H1P2mux4.jpg"/>
           </div>
         );
     }
