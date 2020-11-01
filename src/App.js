@@ -2,6 +2,7 @@ import Axios from 'axios';
 import React, { Component } from 'react';
 
 import Header from './components/Header/Header';
+import MoviesList from './containers/MoviesList';
 import TopMoviesList from './containers/TopMoviesList';
 
 const API_KEY = "ee52528a3d2bfff0312880daeaee21b3";
@@ -35,6 +36,7 @@ class App extends Component {
           <div className="App">
             <Header />
             {renderTopMoviesList()}
+            <MoviesList />
           </div>
         );
     }

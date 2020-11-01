@@ -19,8 +19,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-/*  background: url("backgroundimg.jpg") no-repeat left top, linear-gradient(#eb01a5, #d13531); */
-  background-color: var(--main-bg-color);
+  background: url("assets/backgroundimg.jpg") no-repeat center top, linear-gradient(#eb01a5, #d13531);
+/*  background-color: var(--main-bg-color); */
   color: var(--main-color);
 }
 
@@ -29,22 +29,43 @@ code {
     monospace;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.mr-50 {
+  margin-right: 50px;
+}
+
 .container {
   margin-top: 30px;
 }
 
-@media screen and (min-width: 1024px) {
-  .container {
-      margin-top: 70px;
-  }
-}
-
 .App {
-  padding: 0 30px;
+    padding: 0 30px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
 
 @media screen and (min-width: 1024px) {
-  .App {
-    padding: 0 92px;
-  }
+    .App {
+        padding: 0 92px;
+    }
+
+    .container {
+        margin-top: 70px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
 }
