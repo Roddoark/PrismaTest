@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Card from "../Card/Card";
+import SliderArrow from "../SliderArrow/SliderArrow";
 
 /*
 import "slick-carousel/slick/slick.css";
@@ -8,17 +9,6 @@ import "slick-carousel/slick/slick-theme.css";
 */
 
 import './Slider.css';
-
-function SampleArrow(props) {
-    const { classname, onClick, icon } = props;
-    return (
-        <button
-        className={classname}
-        onClick={onClick}>
-            <span className={icon}></span>
-        </button>
-    )
-}
 
 export default class Slide extends Component {
     render() {
@@ -32,8 +22,8 @@ export default class Slide extends Component {
             slidesToScroll: 2,
             speed: 1000,
             width: 200,
-            nextArrow: <SampleArrow classname="slick-button-next" icon="slider-button-iconNext" />,
-            prevArrow: <SampleArrow classname="slick-button-previous" icon="slider-button-iconPrevious" />
+            nextArrow: <SliderArrow classname="slick-button-next" icon="slider-button-iconNext" />,
+            prevArrow: <SliderArrow classname="slick-button-previous" icon="slider-button-iconPrevious" />
         };
         return (
             <section className="container">
