@@ -2,7 +2,9 @@ import Axios from 'axios';
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import Slider from './components/Slider/Slider';
+
+import Card from './components/Card/Card';
+import TopMoviesList from './containers/TopMoviesList';
 
 const API_KEY = "ee52528a3d2bfff0312880daeaee21b3";
 
@@ -17,7 +19,6 @@ class App extends Component {
 
     componentDidMount() {
         Axios.get(`${END_POINT}${POPULAR_MOVIES_URL}`).then(function(response) {
-            console.log('',response);
             this.setState({
                 topMoviesList: response.data.results.slice(1,11)
             })
@@ -26,10 +27,17 @@ class App extends Component {
     }
 
     render() {
+        const renderTopMoviesList = () => {
+            if(this.state.topMoviesList.length >= 4) {
+                return <TopMoviesList topMoviesList={this.state.topMoviesList} />
+            }
+        }
+
         return (
           <div className="App">
             <Header />
-            <Slider />
+            {renderTopMoviesList()}
+            <Card title="okok" year="dcv" img="https://image.tmdb.org/t/p/w440_and_h660_face/fkqJJDb4u9rEyJu8Jm8H1P2mux4.jpg"/>
           </div>
         );
     }
