@@ -1,8 +1,3 @@
-.top10-title {
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-}
-
 .slick-button-previous, .slick-button-next {
     display: none;
 }
@@ -98,10 +93,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .top10-title {
-        font-size: 26px;
-    }
-
     .slick-slider .slick-track, .slick-slider .slick-list {
         margin: 0 70px;
     }

@@ -1,0 +1,40 @@
+.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: #586E94;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 13px 18px;
+    border: 1px solid #586E94;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #34495e;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+option {
+    -webkit-appearance:none;
+    background-color: #253755;
+    color: #586E94;
+}
