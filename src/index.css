@@ -5,7 +5,6 @@
     --color-field-active: #586E94;
 
     /* MEDIA QUERIES */
-
     --breakpoint-sm: 640px; /* Old Value : 576px */
     --breakpoint-md: 768px; /* Old Value : 768px */
     --breakpoint-lg: 1024px; /* Old Value : 992px */
@@ -16,12 +15,10 @@
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url("assets/backgroundimg.jpg") no-repeat center top, linear-gradient(#eb01a5, #d13531);
+    background: url("assets/backgroundimg.jpg") no-repeat center top, linear-gradient(var(--main-bg-color), var(--main-bg-color));
     /*  background-color: var(--main-bg-color); */
     color: var(--main-color);
 }
@@ -35,6 +32,9 @@ code {
     display: flex;
 }
 
+.mx-auto {
+    margin: auto;
+}
 .ml-10 {
     margin-left: 10px;
 }

@@ -31,4 +31,9 @@
     -webkit-transition: .25s all ease;
     -o-transition: .25s all ease;
     transition: .25s all ease;
-  }
+}
+
+option {
+    -webkit-appearance:none;
+    background-color: rebeccapurple;
+}
