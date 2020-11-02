@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import Axios from 'axios';
+
 import Slider from '../components/Slider/Slider';
 import Card from "../components/Card/Card";
 
-const IMG_URL = "https://image.tmdb.org/t/p/w440_and_h660_face/"
+import { END_POINT, IMG_URL, POPULAR_MOVIES_URL } from '../EndPoints'
 
-function TopMoviesList({topMoviesList}) {
+function TopMoviesList() {
+    const [topMoviesList, setTopMoviesList] = useState([])
+
+    useEffect(() => {
+        const fetchMovies = async () => {
+            const res = await Axios.get(`${END_POINT}${POPULAR_MOVIES_URL}`)
+            setTopMoviesList(res.data.results.slice(1,11))
+        }
+
+        fetchMovies();
+    }, []);
+
     const renderSlides = () =>
     topMoviesList.map(movie => (
         <Card key={movie.id} title={movie.title} year={movie.release_date} img={`${IMG_URL}${movie.poster_path}`}/>

@@ -21,7 +21,7 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url("assets/backgroundimg.jpg") no-repeat center top, linear-gradient(#eb01a5, #d13531);
+    background: url("assets/backgroundimg.jpg") no-repeat center top, linear-gradient(var(--main-bg-color), var(--main-bg-color));
     /*  background-color: var(--main-bg-color); */
     color: var(--main-color);
 }
