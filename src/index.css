@@ -57,7 +57,10 @@ body {
 }
 
 .container {
-    margin-top: 30px;
+    padding-top: 30px;
+}
+.container:last-child {
+    border-top: 1px solid #2F3D57;
 }
 
 .text-align-center {
@@ -94,8 +97,8 @@ body {
         padding: 0 92px;
     }
 
-    .container {
-        margin-top: 70px;
+    .container:first-of-type {
+        padding-top: 70px;
     }
 
     .section-title {
