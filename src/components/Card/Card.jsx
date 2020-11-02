@@ -10,7 +10,7 @@ function Card(props) {
                 alt={props.title}
             />
             <h3 className="card-movie-title">{props.title}</h3>
-            <p className="card-movie-year">{props.year}</p>
+            <p className="card-movie-year">{props.year.slice(0,4)}</p>
         </div>
     )
 }

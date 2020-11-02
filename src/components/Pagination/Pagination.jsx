@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Pagination.css'
 
 export default function Pagination({ moviesPerPage, totalMovies, paginate }) {
@@ -6,6 +6,13 @@ export default function Pagination({ moviesPerPage, totalMovies, paginate }) {
 
     for(let i = 1; i<= Math.ceil(totalMovies / moviesPerPage); i++) {
         pageNumbers.push(i);
+    }
+
+    const [currentPage, setCurrentPage] = useState(1)
+
+    const paginationClick = (number) => {
+        paginate(number);
+        setCurrentPage(number)
     }
 
     return (
@@ -19,7 +26,8 @@ export default function Pagination({ moviesPerPage, totalMovies, paginate }) {
                 </li>
                 {pageNumbers.map(number => (
                     <li key={number} className="pagination-item">
-                        <a onClick={() => paginate(number)} href="!#" className="pagination-link">
+                        <a onClick={() => paginationClick(number)} href="!#"
+                        className={`pagination-link ${number === currentPage ? 'active' : ' '}`}>
                             {number}
                         </a>
                     </li>

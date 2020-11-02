@@ -32,6 +32,9 @@ code {
     display: flex;
 }
 
+.mx-auto {
+    margin: auto;
+}
 .ml-10 {
     margin-left: 10px;
 }

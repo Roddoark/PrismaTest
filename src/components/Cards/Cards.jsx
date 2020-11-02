@@ -12,7 +12,7 @@ const Cards = ({ movies, loading }) => {
     <>
       {movies.map(movie => (
         <Card
-            className="mt-30 text-align-center"
+            className="mt-30"
             key={movie.id}
             title={movie.title}
             year={movie.release_date}

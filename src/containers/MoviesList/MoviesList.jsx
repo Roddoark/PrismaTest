@@ -14,19 +14,38 @@ function MoviesList() {
     const [movies, setMovies] = useState([])
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
-    const [moviesPerPage] = useState(5)
+    const [moviesPerPage] = useState(10)
+
+
+    const sortByGenre = (movies, element, value) => {
+        const result = movies.filter(movie => movie[element].includes(value));
+        return result;
+    }
+
+    // UseEffect à utiliser pour les options du select
+/*    useEffect(() => {
+
+    }) */
 
     useEffect(() => {
         const fetchMovies = async () => {
             setLoading(true)
             const res = await Axios.get(`${END_POINT}${ALL_MOVIES_URL}`)
-            setMovies(res.data.results)
+            
+            // const result = movies.filter(movies => word.original_language === 'en');
+
+           // setMovies(res.data.results)
+            const sortedMovies = sortByGenre(res.data.results, "genre_ids", 18)
+            setMovies(res.data.results.filter(movie => movie.original_language === 'en'))
+            console.log(res.data.results)
+            console.log('dededed', sortedMovies);
             setLoading(false)
         }
 
         fetchMovies();
     }, []);
 
+    
     const indexOfLastMovie = currentPage * moviesPerPage;
     const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
     const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);
