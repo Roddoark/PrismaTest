@@ -1,4 +1,5 @@
 import React from 'react'
+import './Pagination.css'
 
 export default function Pagination({ moviesPerPage, totalMovies, paginate }) {
     const pageNumbers = []
@@ -10,6 +11,12 @@ export default function Pagination({ moviesPerPage, totalMovies, paginate }) {
     return (
         <nav>
             <ul className="pagination">
+                <li className="pagination-item">
+                    <a href="!#" className="pagination-link ">
+                    <span className="pagination-button-iconPrevious"></span>
+
+                    </a>
+                </li>
                 {pageNumbers.map(number => (
                     <li key={number} className="pagination-item">
                         <a onClick={() => paginate(number)} href="!#" className="pagination-link">
@@ -17,6 +24,11 @@ export default function Pagination({ moviesPerPage, totalMovies, paginate }) {
                         </a>
                     </li>
                 ))}
+                <li className="pagination-item">
+                    <a href="!#" className="pagination-link">
+                        <span className="pagination-button-iconNext"></span>
+                    </a>
+                </li>
             </ul>
         </nav>
     )

@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
 
-import Card from '../../components/Card/Card';
 import Label from '../../components/Label/Label'
 import Select from '../../components/Select/Select'
 import Pagination from '../../components/Pagination/Pagination';
+import Cards from '../../components/Cards/Cards';
 
 import { ALL_MOVIES_URL, END_POINT } from '../../EndPoints'
 
 import './MoviesList.css'
-import Cards from '../../components/Cards/Cards';
 
 function MoviesList() {
     const [movies, setMovies] = useState([])
@@ -28,29 +27,11 @@ function MoviesList() {
         fetchMovies();
     }, []);
 
-
     const indexOfLastMovie = currentPage * moviesPerPage;
     const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
     const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);
 
     const paginate = pagenumber => setCurrentPage(pagenumber)
-
-    /*
-    const renderMovies = () =>
-    movies.map(movie => (
-        <Card
-            className="mt-30 text-align-center"
-            key={movie.id}
-            title={movie.title}
-            year={movie.release_date}
-            img={`${IMG_URL}${movie.poster_path}`}
-            movies={currentMovies}
-        />
-    ));
-
-    if(loading) {
-        return <p>Loading...</p>
-    } */
 
     return (
         <section className="container">
@@ -67,13 +48,13 @@ function MoviesList() {
                 </div>
             </div>
             <div className="container-movie-grid">
-            <Cards movies={currentMovies} loading={loading} />
+                <Cards movies={currentMovies} loading={loading} />
+            </div>
             <Pagination 
                 moviesPerPage={moviesPerPage}
                 totalMovies={movies.length}
                 paginate={paginate}
             />
-            </div>
         </section>
     )
 }

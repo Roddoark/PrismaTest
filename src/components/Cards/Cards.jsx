@@ -3,7 +3,6 @@ import Card from '../Card/Card';
 
 import { IMG_URL } from '../../EndPoints'
 
-
 const Cards = ({ movies, loading }) => {
   if (loading) {
     return <h2>Loading...</h2>;
