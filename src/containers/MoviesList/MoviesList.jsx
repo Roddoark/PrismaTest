@@ -54,8 +54,20 @@ function MoviesList() {
                 </div>
                 <div>
                     <Label htmlFor="gender">Filtrer par</Label>
-                    <Select id="gender" genres={genres} defaultOption="Genre" value={genreSelected} setValue={setGenreSelected} />
-                    <Select className="ml-10" id="gender" defaultOption="Année" />
+                    <Select 
+                        id="gender"
+                        genres={genres}
+                        defaultOption="Genre"
+                        value={genreSelected}
+                        setValue={setGenreSelected}
+                        selected={true}
+                        disabled={true}
+                    />
+                    <Select
+                        className="ml-10"
+                        id="gender"
+                        defaultOption="Année"
+                    />
                 </div>
             </div>
             <div className="container-movie-grid">

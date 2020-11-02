@@ -5,10 +5,10 @@
     --color-field-active: #586E94;
 
     /* MEDIA QUERIES */
-    --breakpoint-sm: 640px; /* Old Value : 576px */
-    --breakpoint-md: 768px; /* Old Value : 768px */
-    --breakpoint-lg: 1024px; /* Old Value : 992px */
-    --breakpoint-xl: 1280px; /* Old Value : 1200px */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
 }
 
 * { box-sizing: border-box; }
@@ -18,14 +18,27 @@ body {
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url("assets/backgroundimg.jpg") no-repeat center top, linear-gradient(var(--main-bg-color), var(--main-bg-color));
-    /*  background-color: var(--main-bg-color); */
     color: var(--main-color);
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    background-image: 
+    linear-gradient(
+        rgba(13, 29, 56, 0.5), 
+        rgba(13, 29, 56, 1),
+        rgba(13, 29, 56, 1),
+        rgba(13, 29, 56, 1),
+        rgba(13, 29, 56, 1),        
+        rgba(13, 29, 56, 1),
+        rgba(13, 29, 56, 1),
+        rgba(13, 29, 56, 1),
+        rgba(13, 29, 56, 1),
+        rgba(13, 29, 56, 1)
+    ),
+    url("assets/backgroundimg.jpg");
+    background-repeat: no-repeat;
+    background-position: 70%, center top;
+    background-size: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .d-flex {
@@ -63,6 +76,22 @@ code {
 }
 
 @media screen and (min-width: 1024px) {
+    body {
+        background-image: 
+        linear-gradient(
+            rgba(13, 29, 56, 0.5), 
+            rgba(13, 29, 56, 0.6),
+            rgba(13, 29, 56, 0.7),
+            rgba(13, 29, 56, 0.9),
+            rgba(13, 29, 56, 1),
+            rgba(13, 29, 56, 1),
+            rgba(13, 29, 56, 1),
+            rgba(13, 29, 56, 1),
+            rgba(13, 29, 56, 1),
+            rgba(13, 29, 56, 1)
+        ),
+        url("assets/backgroundimg.jpg");
+    }
     .App {
         padding: 0 92px;
     }
