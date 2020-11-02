@@ -1,0 +1,32 @@
+.sortAndFilters-fields {
+    display: block;
+}
+
+.sortAndFilters-fields > * {
+    margin: 10px 0;
+}
+
+.container-movie-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container-movie-grid > * {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+    .sortAndFilters-fields {
+        display: flex;
+    }
+
+    .sortAndFilters-fields > * {
+        margin: 0 50px 0 0;
+    }
+
+    .container-movie-grid > * {
+        width: 20%;
+    }
+}

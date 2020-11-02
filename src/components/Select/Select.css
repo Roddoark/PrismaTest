@@ -1,0 +1,40 @@
+.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    padding: 0 .5em;
+    color: #586E94;
+    background: transparent url("../../assets/dropdownarrow.svg") no-repeat 85%;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 13px 18px;
+    border: 1px solid #586E94;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    position: relative;
+    background-size: 7%;
+}
+
+.option {
+    -webkit-appearance:none;
+    background-color: #253755;
+    color: #586E94;
+}
+
+@media screen and (min-width: 1024px) {
+    .select {
+        padding: 13px 60px 13px 18px;
+    }
+}
+
+/* CUSTOM */
+
+
+#alphabeticalOrder.select{
+    padding: 13px 60px 13px 18px;
+}
