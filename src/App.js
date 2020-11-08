@@ -5,13 +5,13 @@ import MoviesList from './containers/MoviesList/MoviesList';
 import TopMoviesList from './containers/TopMoviesList';
 
 function App() {
-    return (
-        <div className="App">
-            <Header />
-            <TopMoviesList />
-            <MoviesList />
-        </div>
-    );
+  return (
+    <div className="App">
+      <Header />
+      <TopMoviesList />
+      <MoviesList />
+    </div>
+  );
 }
 
 export default App;
