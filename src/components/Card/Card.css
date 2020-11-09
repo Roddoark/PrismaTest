@@ -1,28 +1,28 @@
 .card-movie-img {
-    width: 70%;
-    border-radius: 10px;
+  width: 70%;
+  border-radius: 10px;
 }
 
 .card-movie-title {
-    font-size: 14px;
-    margin-bottom: 0;
-    padding-right: 20px;
+  font-size: 14px;
+  margin-bottom: 0;
+  padding-right: 20px;
 }
 
 .card-movie-year {
-    font-size: 12px;
-    font-weight: 400;
-    margin-top: 5px;
-    color: var(--color-field-active);
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
+  color: var(--color-field-active);
 }
 
 @media screen and (min-width: 1024px) {
-    .card-movie-img {
-        width: 138px;
-        height: 215px;
-    }
+  .card-movie-img {
+    width: 138px;
+    height: 215px;
+  }
 
-    .card-movie-title {
-        padding-right: 0;
-    }
+  .card-movie-title {
+    padding-right: 0;
+  }
 }
