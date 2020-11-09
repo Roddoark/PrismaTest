@@ -7,6 +7,7 @@ function SliderArrow(classname, onClick, icon) {
       className={classname}
       onClick={onClick}
     >
+      {/* eslint-disable-next-line react/self-closing-comp */}
       <span className={icon}></span>
     </button>
   );

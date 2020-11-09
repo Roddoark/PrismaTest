@@ -15,7 +15,9 @@ export default function MoviesList() {
   const [currentPage, setCurrentPage] = useState(1);
   const [moviesPerPage] = useState(10);
   const [genreSelected, setGenreSelected] = useState(0);
+  // eslint-disable-next-line no-shadow
   const sortByGenre = (movies, element, value) => {
+    // eslint-disable-next-line radix
     const result = movies.filter((movie) => movie[element].includes(parseInt(value)));
     return result;
   };
@@ -38,6 +40,7 @@ export default function MoviesList() {
     console.log('genre changed', genreSelected);
     const moviesSorted = sortByGenre(moviesList, 'genre_ids', genreSelected);
     setMovies(moviesSorted.length > 0 ? moviesSorted : []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [genreSelected]);
 
   const indexOfLastMovie = currentPage * moviesPerPage;

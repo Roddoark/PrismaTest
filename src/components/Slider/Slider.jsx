@@ -1,17 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Slider from 'react-slick';
 import SliderArrow from '../SliderArrow/SliderArrow';
-
-/*
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-*/
-
 import './Slider.css';
 
-function Slide(children) {
+function Slide(childn) {
   const settings = {
-    infinite: true,
     slidesToShow: 4,
     slidesToScroll: 2,
     speed: 1000,
@@ -22,9 +16,9 @@ function Slide(children) {
 
   return (
     <Slider {...settings}>
-      {children}
+      {childn}
     </Slider>
-    )
+  );
 }
 
 export default Slide;

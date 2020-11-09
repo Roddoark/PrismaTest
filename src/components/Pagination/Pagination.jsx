@@ -4,7 +4,7 @@ import './Pagination.css';
 export default function Pagination(moviesPerPage, totalMovies, paginate) {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalMovies / moviesPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalMovies / moviesPerPage); i += 1) {
     pageNumbers.push(i);
   }
 
@@ -20,6 +20,7 @@ export default function Pagination(moviesPerPage, totalMovies, paginate) {
       <ul className="pagination">
         <li className="pagination-item">
           <a href="!#" className="pagination-link ">
+            {/* eslint-disable-next-line react/self-closing-comp */}
             <span className="pagination-button-iconPrevious"></span>
           </a>
         </li>
@@ -36,6 +37,7 @@ export default function Pagination(moviesPerPage, totalMovies, paginate) {
         ))}
         <li className="pagination-item">
           <a href="!#" className="pagination-link">
+            {/* eslint-disable-next-line react/self-closing-comp */}
             <span className="pagination-button-iconNext"></span>
           </a>
         </li>
