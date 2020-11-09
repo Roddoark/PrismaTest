@@ -1,5 +1,5 @@
-import React from 'react'
-import Select from '../../../components/Select/Select'
+import React from 'react';
+import Select from '../../../components/Select/Select';
 
 export default function YearsFilter() {
   return (
@@ -10,5 +10,5 @@ export default function YearsFilter() {
         defaultOption="Genre"
       />
     </>
-  )
+  );
 }
