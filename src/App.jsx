@@ -6,6 +6,7 @@ import TopMoviesList from './containers/TopMoviesList';
 
 function App() {
   return (
+    // eslint-disable-next-line react/jsx-filename-extension
     <div className="App">
       <Header />
       <TopMoviesList />

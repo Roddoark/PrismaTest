@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 
 import Slider from '../components/Slider/Slider';
@@ -20,18 +20,18 @@ export default function TopMoviesList() {
 
   const renderSlides = () => {
     topMoviesList.map((movie) => (
-      <Card key={movie.id} title={movie.title} year={movie.release_date} img={`${IMG_URL}${movie.poster_path}`}/>
+      <Card key={movie.id} title={movie.title} year={movie.release_date} img={`${IMG_URL}${movie.poster_path}`} />
     ));
-
-    return (
-      <section className="container">
-        <h1 className="section-title">Les 10 meilleurs films</h1>
-        <div className="slider">
-          <Slider>
-            {renderSlides()}
-          </Slider>
-        </div>
-      </section>
-    );
   };
+
+  return (
+    <section className="container">
+      <h1 className="section-title">Les 10 meilleurs films</h1>
+      <div className="slider">
+        <Slider>
+          {renderSlides()}
+        </Slider>
+      </div>
+    </section>
+  );
 }
