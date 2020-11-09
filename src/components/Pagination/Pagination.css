@@ -1,36 +1,38 @@
 .pagination {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style: none;
-    margin: 50px 0;
-    padding: 0;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  margin: 50px 0;
+  padding: 0;
+}
+
 .pagination-link {
-    color: var(--color-field-active);
-    padding: 8px 12px;
-    text-decoration: none;
-    transition: background-color .3s;
-    border: 1px solid #253755;
-    border-radius: 12px;
-    margin: 0 4px;
-    font-size: 16px;
-    font-weight: 900;
+  color: var(--color-field-active);
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #253755;
+  border-radius: 12px;
+  margin: 0 4px;
+  font-size: 16px;
+  font-weight: 900;
 }
 
 .pagination-link.active {
-    background-color: #253755;
+  background-color: #253755;
 }
 
-.pagination-link:hover:not(.active) {background-color: #253755;}
+.pagination-link:hover:not(.active) {
+  background-color: #253755;
+}
 
 .pagination-button-iconPrevious {
-    background: url("../../assets/paginationpreviousarrow.svg") no-repeat center center;
-    padding: 0 5px;
+  background: url("../../assets/paginationpreviousarrow.svg") no-repeat center center;
+  padding: 0 5px;
 }
 
 .pagination-button-iconNext {
-    background: url("../../assets/paginationnextarrow.svg") no-repeat center center;
-    padding: 0 5px;
+  background: url("../../assets/paginationnextarrow.svg") no-repeat center center;
+  padding: 0 5px;
 }
