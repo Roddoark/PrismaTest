@@ -1,10 +1,11 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Slider from 'react-slick';
+import PropTypes from 'prop-types';
 import SliderArrow from '../SliderArrow/SliderArrow';
 import './Slider.css';
 
-function Slide(childn) {
+function Slide({ children }) {
   const settings = {
     slidesToShow: 4,
     slidesToScroll: 2,
@@ -16,9 +17,12 @@ function Slide(childn) {
 
   return (
     <Slider {...settings}>
-      {childn}
+      {children}
     </Slider>
   );
 }
 
 export default Slide;
+Slide.propTypes = {
+  children: PropTypes.node.isRequired,
+};

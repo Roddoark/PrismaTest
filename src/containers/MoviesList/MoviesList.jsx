@@ -37,7 +37,6 @@ export default function MoviesList() {
   }, []);
 
   useEffect(() => {
-    console.log('genre changed', genreSelected);
     const moviesSorted = sortByGenre(moviesList, 'genre_ids', genreSelected);
     setMovies(moviesSorted.length > 0 ? moviesSorted : []);
   // eslint-disable-next-line react-hooks/exhaustive-deps
