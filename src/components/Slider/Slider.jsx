@@ -23,7 +23,6 @@ function Slide({ children }) {
 }
 
 export default Slide;
-
 Slide.propTypes = {
   children: PropTypes.node.isRequired,
 };
