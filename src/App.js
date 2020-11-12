@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from './components/Header/Header';
+import Label from './components/Label/Label';
 import GendersFilter from './containers/AllMoviesSection/GendersFilter/GendersFilter';
 import TopMoviesList from './containers/TopMoviesList';
 /* import MoviesList from './containers/MoviesList/MoviesList';
@@ -16,6 +17,9 @@ function App() {
       <GendersFilter>
         ded
       </GendersFilter>
+      <Label Cfor="frf">
+        aloha
+      </Label>
     </div>
   );
 }

@@ -1,10 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './Label.css';
 
-export default function Label(Childn, Cfor) {
+export default function Label({ children, Cfor }) {
   return (
     <label className="label mr-10" htmlFor={Cfor}>
-      {Childn}
+      {children}
     </label>
   );
 }
+
+Label.propTypes = {
+  children: PropTypes.node.isRequired,
+  Cfor: PropTypes.string.isRequired,
+};
